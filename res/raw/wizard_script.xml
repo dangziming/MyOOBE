@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WizardScript wizard:firstAction="welcome"
+  xmlns:wizard="http://schemas.android.com/apk/res/com.neostra.android.oobe">
+
+    <!-- Welcome -->
+    <WizardAction id="welcome"
+        wizard:uri="intent:#Intent;action=com.neostra.android.oobe.WELCOME;end">
+        <result wizard:action="choose_language" />
+    </WizardAction>
+
+    <!-- Choose language -->
+    <WizardAction id="choose_language"
+        wizard:uri="intent:#Intent;action=com.neostra.android.oobe.CHOOSE_LANGUAGE;end">
+        <result wizard:action="time_zone" />
+    </WizardAction>
+
+    <!-- Time Zone -->
+    <WizardAction id="time_zone"
+        wizard:uri="intent:#Intent;action=com.neostra.android.oobe.CHOOSE_TIME_ZONE;end">
+        <result wizard:action="wifi_settings" />
+    </WizardAction>
+
+    <!-- neostra Legal -->
+    <WizardAction id="neostra_legal"
+        wizard:uri="intent:#Intent;action=com.neostra.android.oobe.neostra_LEGAL_PAGE;end">
+        <result wizard:name="no_3g_module" wizard:resultCode="-1" wizard:action="wifi_settings" />
+        <result wizard:action="network_connection_setup" />
+    </WizardAction>
+
+    <!-- Network connection chooser -->
+    <WizardAction id="network_connection_setup"
+        wizard:uri="intent:#Intent;action=com.neostra.android.oobe.NETWORK_CONNECTION;end">
+        <result wizard:name="both_3g_sim_missing" wizard:resultCode="-1" wizard:action="sim_missing" />
+        <result wizard:name="wifi_only" wizard:resultCode="1" wizard:action="wifi_settings" />
+        <result wizard:name="later" wizard:resultCode="2" wizard:action="date_time" />
+        <result wizard:name="both_3g_sim_not_missing" wizard:resultCode="3" wizard:action="select_sim" />
+    </WizardAction>
+
+    <!-- Sim missing -->
+    <WizardAction id="sim_missing"
+        wizard:uri="intent:#Intent;action=com.neostra.android.oobe.SIM_MISSING;end">
+        <result wizard:name="sim_not_missing" wizard:resultCode="-1" wizard:action="select_sim" />
+        <result wizard:name="skip_sim" wizard:resultCode="1" wizard:action="wifi_settings" />
+    </WizardAction>
+
+    <!-- Select sim -->
+    <WizardAction id="select_sim"
+        wizard:uri="intent:#Intent;action=com.neostra.android.oobe.SELECT_SIM;end">
+        <result wizard:action="wifi_settings" />
+    </WizardAction>
+
+    <!-- Select wifi -->
+     <WizardAction id="wifi_settings"
+        wizard:uri="intent:#Intent;action=com.neostra.android.oobe.WIFI_SETTING;end">
+        <result wizard:action="setup_complete" />
+        <!--has network connection, go name setup-->
+        <!-- <result wizard:name="connected" wizard:resultCode="-1" wizard:action="setup_lock" /> -->
+        <!--no network connection, go datetime setup-->
+        <!-- <result wizard:name="no_connection" wizard:action="date_time" /> -->
+    </WizardAction>
+
+    <!-- Customized content -->
+     <WizardAction id="customized_content"
+        wizard:uri="intent:#Intent;action=com.neostra.android.oobe.CUSTOMIZED_CONTENT;end">
+        <result wizard:action="activating_settings" />
+    </WizardAction>
+
+    <!-- Activating Settings -->
+    <WizardAction id="activating_settings"
+        wizard:uri="intent:#Intent;action=com.neostra.android.oobe.ACTIVATING;end">
+        <result wizard:action="setup_complete" />
+    </WizardAction>
+
+    <!-- Date and time -->
+    <WizardAction id="date_time"
+        wizard:uri="intent:#Intent;action=com.neostra.android.oobe.DATE_TIME;end">
+        <result wizard:action="wifi_settings" />
+    </WizardAction>
+
+    <!-- Name -->
+    <WizardAction id="name_setup"
+        wizard:uri="intent:#Intent;action=com.neostra.android.oobe.NAME_SETUP;end">
+        <result wizard:action="oem_post_setup" />
+    </WizardAction>
+
+    <!-- OEM post setup -->
+    <WizardAction id="oem_post_setup"
+         wizard:uri="intent:#Intent;action=com.android.setupwizard.OEM_POST_SETUP;end">
+        <result wizard:action="exit" />
+    </WizardAction>
+
+    <!-- Lock -->
+    <WizardAction id="setup_lock"
+        wizard:uri="intent:#Intent;action=com.neostra.android.oobe.SETUP_LOCK;end">
+        <result wizard:action="setup_complete" />
+    </WizardAction>
+
+    <!-- Setup complete -->
+    <WizardAction id="setup_complete"
+        wizard:uri="intent:#Intent;action=com.neostra.android.oobe.SETUP_COMPLETE;end">
+        <result wizard:action="exit" />
+    </WizardAction>
+
+    <WizardAction id="exit"
+        wizard:uri="intent:#Intent;action=com.neostra.android.oobe.SETUP_EXIT;launchFlags=0x10208000;end" />
+</WizardScript>

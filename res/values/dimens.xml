@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!-- General -->
+    <!-- content  -->
+    <dimen name="suw_radio_padding_start">24dp</dimen>
+    <dimen name="suw_radio_desc_margin_start">48dp</dimen>
+    <dimen name="suw_radio_margin_bottom">32dp</dimen>
+    <dimen name="suw_paragraph_spacing">18dp</dimen>
+
+    <dimen name="title_bar_height">95dp</dimen>
+    <dimen name="title_size">24sp</dimen>
+    <dimen name="setup_title_margin_bottom">16dp</dimen>
+    <dimen name="setup_wizard_margin_sides">40dp</dimen>
+    <dimen name="setup_title_padding_bottom">2dp</dimen>
+    <dimen name="setup_title_padding_top">16dp</dimen>
+    <dimen name="content_padding_up_down">24dp</dimen>
+    <dimen name="content_padding_sides">25dp</dimen>
+    <dimen name="configure_progress_bar_layout_height">10dp</dimen>
+    <dimen name="configure_progress_bar_margin_top">-5dp</dimen>
+    <dimen name="wifi_title_size">26sp</dimen>
+    <dimen name="wifi_list_padding_strat">18dp</dimen>
+    <dimen name="wifi_list_padding_end">18dp</dimen>
+    <dimen name="password_dialog_padding_strat">20dp</dimen>
+    <dimen name="password_dialog_button_margin_left">119dp</dimen>
+    <dimen name="password_dialog_button_margin_right">29dp</dimen>
+
+    <dimen name="connected_wifi_padding_top">14dp</dimen>
+    <dimen name="connected_state_padding_top">4dp</dimen>
+    <dimen name="connected_state_padding_bottom">14dp</dimen>
+    <dimen name="sconnected_ssid_text_size">16sp</dimen>
+    <dimen name="connected_state_text_size">12sp</dimen>
+    <dimen name="connecting_icon_size">24dp</dimen>
+    <dimen name="connected_icon_width">17dp</dimen>
+    <dimen name="connected_icon_height">15dp</dimen>
+    <dimen name="wifi_layout_height">10dp</dimen>
+    
+    <dimen name="wifi_icon_width">23dp</dimen>
+    <dimen name="wifi_icon_height">19dp</dimen>
+    <dimen name="wifi_icon_padding_size">10dp</dimen>
+    <dimen name="wifi_list_height">261dp</dimen>
+    <dimen name="list_height">61dp</dimen>
+
+    <dimen name="skip_width">70dp</dimen>
+    <dimen name="skip_height">30dp</dimen>
+    <dimen name="skip_padding_top">9dp</dimen>
+    <dimen name="skip_button_text_size">16sp</dimen>
+    <dimen name="wifi_lv_title_padding_top">7dp</dimen>
+    <dimen name="wifi_lv_title_padding_bottom">6dp</dimen>
+    <dimen name="wifi_lv_title_size">12sp</dimen>
+    <dimen name="sim_network_title_padding_top">15dp</dimen>
+    <dimen name="sim_network_title_size">12sp</dimen>
+    <dimen name="sim_network_value_padding_top">8dp</dimen>
+    <dimen name="sim_network_value_padding_bottom">15dp</dimen>
+    <dimen name="sim_network_value_size">16sp</dimen>
+    
+    <dimen name="customized_title_padding_start">25dp</dimen>
+    <dimen name="customized_title_padding_end">24dp</dimen>
+    <dimen name="customized_title_size">26sp</dimen>
+    <dimen name="customized_list_padding_start">27dp</dimen>
+    <dimen name="customized_list_padding_end">25dp</dimen>
+    <dimen name="customized_icon_size">18dp</dimen>
+
+<!-- Welcome page-->
+    <dimen name="welcome_title_size">60sp</dimen>
+    <dimen name="welcome_title_padding_top">300dp</dimen>
+    <dimen name="welcome_tip_text_size">14sp</dimen>
+    <dimen name="tip_text_padding_bottom">30dp</dimen>
+    <dimen name="next_button_text_size">18sp</dimen>
+    <dimen name="next_button_width">324dp</dimen>
+    <dimen name="next_button_height">44dp</dimen>
+    <dimen name="next_button_elevation">0dp</dimen>
+    <dimen name="next_button_padding_bottom">70dp</dimen>
+
+    <dimen name="loading_size">28dp</dimen>
+    <dimen name="wifi_loading_padding_top">95dp</dimen>
+    <dimen name="wifi_loading_text_padding">13dp</dimen>
+    <dimen name="next_button_size">64dp</dimen>
+    <dimen name="emergency_text_size">16dp</dimen>
+    <dimen name="emergency_padding">15dp</dimen>
+    <dimen name="welcome_mu_message_margin_top">5dp</dimen>
+    
+    <dimen name="activating_padding_top">202dp</dimen>
+    <dimen name="activating_size">96dp</dimen>
+    <dimen name="activating_text_padding_top">20dp</dimen>
+    <dimen name="activating_text_size">16sp</dimen>
+
+    <dimen name="complete_padding_top">209dp</dimen>
+    <dimen name="complete_size">72dp</dimen>
+    <dimen name="complete_text_padding_top">30dp</dimen>
+    <dimen name="complete_text_size">16sp</dimen>
+
+    <dimen name="show_text_size">18sp</dimen>
+
+<!-- Data Network Connection page-->
+    <dimen name="text_wifi_3g_layout_marginLeft">50dp</dimen>
+    <dimen name="radioButton_wifi_3g_paddingLeft">20dp</dimen>
+    <dimen name="row_wifi_3g_marginBottom">20dp</dimen>
+
+    <dimen name="setup_add_network_item_height">56dp</dimen>
+    <dimen name="setup_list_no_icon_padding">56dp</dimen>
+
+    <dimen name="dataConnection_radioGroup_marginTop">10dp</dimen>
+
+    <dimen name="radioButton_wifi_3g_text_size">18sp</dimen>
+    <dimen name="radioButton_wifi_3g_layout_marginLeft">0dp</dimen>
+
+    <dimen name="text_wifi_3g_layout_marginTop">3dp</dimen>
+    <dimen name="text_wifi_3g_text_size">12sp</dimen>
+
+    <dimen name="radioButton_wifi_layout_marginTop">15dp</dimen>
+    <dimen name="radioButton_wifi_text_size">18sp</dimen>
+    <dimen name="radioButton_wifi_layout_marginLeft">0dp</dimen>
+    <dimen name="radioButton_wifi_paddingLeft">30dp</dimen>
+
+    <dimen name="text_wifi_layout_marginTop">3dp</dimen>
+    <dimen name="text_wifi_layout_marginLeft">30dp</dimen>
+    <dimen name="text_wifi_text_size">12sp</dimen>
+
+    <dimen name="buttonLinearLayout_layout_x">0dp</dimen>
+    <dimen name="buttonLinearLayout_layout_y">0dp</dimen>
+
+    <dimen name="buttonBack_layout_marginRight">40dp</dimen>
+
+    <dimen name="buttonNext_textSize">18.0dip</dimen>
+    <dimen name="buttonNext_paddingLeft">0.0dip</dimen>
+    <dimen name="buttonNext_paddingTop">0.0dip</dimen>
+    <dimen name="buttonNext_paddingRight">0.0dip</dimen>
+    <dimen name="buttonNext_paddingBottom">0.0dip</dimen>
+    <dimen name="buttonNext_layout_height">38.0dip</dimen>
+    <dimen name="buttonNext_minWidth">118.0dip</dimen>
+
+<!-- Choose a language -->
+    <dimen name="panel_height">130dp</dimen>
+    <dimen name="panel_title_padding">18dp</dimen>
+    <dimen name="panel_title_size">26sp</dimen>
+    <dimen name="direction_width">20dp</dimen>
+    <dimen name="direction_height">5dp</dimen>
+    <dimen name="direction_margintop">22dp</dimen>
+    <dimen name="direction_marginleft">10dp</dimen>
+
+    <dimen name="language_list_height">400dp</dimen>
+    <dimen name="language_list_padding_start">18dp</dimen>
+    <dimen name="language_list_padding_end">18dp</dimen>
+
+    <dimen name="list_text_size">16sp</dimen>
+    <dimen name="list_summary_text_size">12sp</dimen>
+    <dimen name="selected_icon_width">17dp</dimen>
+    <dimen name="selected_icon_height">15dp</dimen>
+
+<!-- ZonePicker-->
+    <dimen name="zone_list_height">340dp</dimen>
+    <dimen name="back_width">24dp</dimen>
+    <dimen name="back_height">24dp</dimen>
+    <dimen name="back_padding_start">11dp</dimen>
+    <dimen name="back_padding_top">15dp</dimen>
+    <dimen name="back_icon_width">9dp</dimen>
+    <dimen name="back_icon_height">16dp</dimen>
+    <dimen name="zone_name_padding_top">13dp</dimen>
+    <dimen name="zone_value_padding_top">5dp</dimen>
+    <dimen name="zone_list_item_height">61dp</dimen>
+
+    <dimen name="preference_fragment_padding_bottom">16dp</dimen>
+    <dimen name="action_bar_switch_padding">16dip</dimen>
+<!-- Name -->
+    <dimen name="row_name_marginBottom">10dp</dimen>
+
+    <dimen name="setup_wizard_card_title_padding_end">0dp</dimen>
+    <dimen name="setup_wizard_card_title_padding_start">0dp</dimen>
+    <dimen name="setup_wizard_card_title_padding_top">16dp</dimen>
+    <dimen name="setup_wizard_card_title_padding_bottom">28dp</dimen>
+    <dimen name="setup_wizard_tablet_illustration_height">256dp</dimen>
+    <dimen name="setup_wizard_card_land_margin_top">128dp</dimen>
+    <dimen name="setup_wizard_card_elevation">5dp</dimen>
+    <dimen name="setup_wizard_card_port_margin_sides">56dp</dimen>
+
+    <!-- legal -->
+    <dimen name="webview_height_land">135dp</dimen>
+</resources>

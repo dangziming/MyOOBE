@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/zone_list_item_height"
+    android:background="@drawable/selector" >
+
+    <TextView
+        android:id="@+id/zone_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/language_list_padding_start"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="@dimen/zone_name_padding_top"
+        android:textColor="@color/list_color"
+        android:textSize="@dimen/list_text_size" />
+
+    <TextView
+        android:id="@+id/zone_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/language_list_padding_start"
+        android:layout_below="@id/zone_name"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="@dimen/zone_value_padding_top"
+        android:layout_marginBottom="@dimen/zone_name_padding_top"
+        android:textColor="@color/list_summary_color"
+        android:textSize="@dimen/list_summary_text_size" />
+
+    <ImageView
+        android:id="@+id/selected"
+        android:layout_width="@dimen/selected_icon_width"
+        android:layout_height="@dimen/selected_icon_height"
+        android:layout_marginRight="@dimen/language_list_padding_end"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_selected"
+        android:visibility="invisible" />
+
+</RelativeLayout>

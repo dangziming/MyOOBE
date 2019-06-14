@@ -1,0 +1,129 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical"
+    style="@style/setupWizardOuterFrame"
+    tools:context="com.neostra.android.oobe.WelcomeActivity"
+    android:background="@android:color/white" >
+
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginLeft="38dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:text="Hello!"
+            android:textColor="#E6333F"
+            android:textSize="60sp" />
+        <TextView
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Welcome to iMinPOS!"
+            android:textColor="#000"
+            android:textSize="18sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" We updated the"
+                android:textColor="#666666"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="goDetail"
+                android:text=" 《User Services and"
+                android:textColor="#0A65CF"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:onClick="goDetail"
+                android:layout_height="wrap_content"
+                android:text="Privacy Agreement》"
+                android:textColor="#0A65CF"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="in accordance with"
+                android:textColor="#666666"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="the latest laws and regulations."
+            android:textColor="#666666"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You must read and agree to the relevant "
+            android:textColor="#666666"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="policies to use this device."
+            android:textColor="#666666"
+            android:textSize="15sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="58dp"
+			android:onClick="changeBtn"
+            android:orientation="horizontal"
+            android:layout_height="30dp">
+            <Button
+                android:id="@+id/welcome_select_btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+				android:clickable="false"
+                android:background="@drawable/ic_welcome_unselected"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="I have read and agree to this agreement"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="90dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:onClick="agreePolicy"
+        android:layout_height="60dp">
+        <TextView
+            android:id="@+id/welcome_agree"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#999999"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:text="Agree"/>
+    </LinearLayout>
+    
+</LinearLayout>

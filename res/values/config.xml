@@ -1,0 +1,3 @@
+<resources>
+    <string name="wizard_script_uri" translatable="false">android.resource://com.neostra.android.oobe/raw/custom_wizard_script</string>
+</resources>

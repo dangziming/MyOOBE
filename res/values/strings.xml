@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="system_default_timezone">GMT</string>
+    <string name="hello">Hello!</string>
+    <string name="app_name" translatable="false">neostraOOBE</string>
+
+    <string name="tip_text">Press anywhere to start.</string>
+    <string name="start_setting">start setting</string>
+    <string name="activating_success">Activating success</string>
+    <string name="next_button_text">Next</string>
+    <string name="setup_succeeded">Setup completion</string>
+    <string name="finish_button_text">start to use</string>
+    <string name="wifi_title_text">Select network</string>
+    <string name="wifi_lv_title_text">Choose a network</string>
+    <string name="wifi_summary_text">Infinite network</string>
+    <string name="wait_moment">wait moment</string>
+    <string name="connecting">Connecting...</string>
+    <string name="connected">Connected</string>
+    <string name="connect_fail">Connection failed</string>
+    <string name="input_password">please input password</string>
+    <string name="customized_title_text">Customized content configuration successfully</string>
+    <string name="custom_wallpaper">Custom wallpaper</string>
+    <string name="wifi_password">Password</string>
+
+    <string name="language_panel_text">Choose a language</string>
+    <string name="skip_button_text">Skip</string>
+    <string name="date_and_time">Select time zone</string>
+    <string name="sim_network_title_text">Sim network</string>
+    <string name="sim_network_value_text">No SIM card inserted</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="connect_text">Connect</string>
+    <string name="wifi_loading_text">Loading...</string>
+    <string name="finish">Finish!</string>
+    
+</resources>

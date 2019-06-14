@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/setupWizardOuterFrame"
+    tools:context="com.neostra.android.oobe.TimeZoneActivity"
+    android:background="@android:color/white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/panel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/panel_height"
+            android:background="@color/panel_background_color" >
+
+            <RelativeLayout
+                android:id="@+id/back"
+                android:layout_width="@dimen/back_width"
+                android:layout_height="@dimen/back_height"
+                android:layout_marginLeft="@dimen/back_padding_start"
+                android:layout_marginTop="@dimen/back_padding_top"
+                android:onClick="goBack" >
+                <ImageView
+                    android:id="@+id/back_icon"
+                    android:layout_width="@dimen/back_icon_width"
+                    android:layout_height="@dimen/back_icon_height"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_back" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/time_zone_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/panel_title_padding"
+                android:layout_centerVertical="true"
+                android:text="@string/date_and_time"
+                android:textSize="@dimen/panel_title_size"
+                android:textColor="@color/panel_title_color" />
+
+            <LinearLayout
+                android:id="@+id/direction1"
+                android:layout_width="@dimen/direction_width"
+                android:layout_height="@dimen/direction_height"
+                android:layout_below="@id/time_zone_title"
+                android:layout_marginLeft="@dimen/panel_title_padding"
+                android:layout_marginTop="@dimen/direction_margintop"
+                android:background="@color/direction_color" />
+
+            <LinearLayout
+                android:id="@+id/direction2"
+                android:layout_width="@dimen/direction_width"
+                android:layout_height="@dimen/direction_height"
+                android:layout_toRightOf="@id/direction1"
+                android:layout_marginLeft="@dimen/direction_marginleft"
+                android:layout_alignTop="@id/direction1"
+                android:background="@color/direction_marked_color" />
+
+            <LinearLayout
+                android:id="@+id/direction3"
+                android:layout_width="@dimen/direction_width"
+                android:layout_height="@dimen/direction_height"
+                android:layout_toRightOf="@id/direction2"
+                android:layout_marginLeft="@dimen/direction_marginleft"
+                android:layout_alignTop="@id/direction2"
+                android:background="@color/direction_color" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/time_zone_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zone_list_height"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/time_zone_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="#eeeeee"
+                android:dividerHeight="1dp"
+                android:scrollbars="none" >
+            </ListView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="@dimen/next_button_padding_bottom"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal" >
+
+       <Button
+           android:id="@+id/nextBtn"
+           android:layout_width="@dimen/next_button_width"
+           android:layout_height="@dimen/next_button_height"
+           android:layout_gravity="center_horizontal"
+           android:background="@drawable/next_button"
+           android:textAllCaps="false"
+           android:textColor="@color/white"
+           android:text="@string/next_button_text"
+           android:textSize="@dimen/next_button_text_size"
+           android:elevation="@dimen/next_button_elevation"
+           android:onClick="goNext" />
+    </LinearLayout>
+</RelativeLayout>

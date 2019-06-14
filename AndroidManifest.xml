@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.neostra.android.oobe"
+    android:sharedUserId="android.uid.system"
+    android:versionCode="2017061601"
+    android:versionName="3.00.4004" >
+
+    <uses-sdk
+        android:minSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.STATUS_BAR" />
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.WRITE_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
+    <uses-permission android:name="android.permission.MANAGE_USERS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIMAX_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIMAX_STATE" />
+    <uses-permission android:name="android.permission.SET_TIME_ZONE"/>
+    <uses-permission android:name="android.permission.SET_TIME" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    
+    <application
+        android:name="com.neostra.android.oobe.NeostraOOBEApplication"
+        android:allowBackup="false"
+        android:allowClearUserData="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+
+        <activity
+            android:name="com.neostra.android.oobe.wizard.WizardManager"
+            android:immersive="true"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:theme="@style/WizardStyleNoAppWindow"
+            android:configChanges="mcc|mnc|locale|keyboard|keyboardHidden|orientation|navigation|screenLayout|fontScale|screenSize|uiMode|smallestScreenSize|layoutDirection" >
+            <intent-filter android:priority="4">
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.neostra.android.oobe.NEXT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Welcome -->
+        <activity android:name="com.neostra.android.oobe.WelcomeActivity"
+            android:immersive="true"
+            android:exported="false"
+            android:configChanges="mcc|mnc|locale|keyboard|keyboardHidden|navigation|screenLayout|fontScale|screenSize|uiMode|smallestScreenSize|layoutDirection" >
+            <intent-filter>
+                <action android:name="com.neostra.android.oobe.WELCOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+		<activity android:name="com.neostra.android.oobe.DetailActivity"
+            android:immersive="true"
+            android:exported="false"
+            android:configChanges="mcc|mnc|locale|keyboard|keyboardHidden|navigation|screenLayout|fontScale|screenSize|uiMode|smallestScreenSize|layoutDirection" >
+			<meta-data android:name="android.webkit.WebView.EnableSafeBrowsing" android:value="true"/>
+        </activity>
+
+        <!-- Choose language -->
+        <activity android:name="com.neostra.android.oobe.LanguageActivity"
+            android:immersive="true"
+            android:exported="false"
+            android:configChanges="mcc|mnc|locale|keyboard|keyboardHidden|navigation|screenLayout|fontScale|screenSize|uiMode|smallestScreenSize|layoutDirection" >
+            <intent-filter>
+                <action android:name="com.neostra.android.oobe.CHOOSE_LANGUAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Time Zone -->
+        <activity android:name="com.neostra.android.oobe.TimeZoneActivity"
+            android:immersive="true"
+            android:exported="false"
+            android:configChanges="mcc|mnc|locale|keyboard|keyboardHidden|navigation|screenLayout|fontScale|screenSize|uiMode|smallestScreenSize" >
+            <intent-filter>
+                <action android:name="com.neostra.android.oobe.CHOOSE_TIME_ZONE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Wifi Setting @style/APPWifiTheme -->
+        <activity android:name="com.neostra.android.oobe.WifiWizardActivity"
+            android:immersive="true"
+            android:exported="false"
+            android:configChanges="mcc|mnc|locale|keyboard|keyboardHidden|navigation|screenLayout|fontScale|screenSize|uiMode|smallestScreenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <intent-filter>
+                <action android:name="com.neostra.android.oobe.WIFI_SETTING" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.neostra.android.oobe.SetupCompleteActivity"
+            android:immersive="true"
+            android:exported="true"
+            android:configChanges="mcc|mnc|locale|keyboard|keyboardHidden|navigation|screenLayout|fontScale|screenSize|uiMode|smallestScreenSize|layoutDirection" >
+            <intent-filter>
+                <action android:name="com.neostra.android.oobe.wizard.SETUP_COMPLETE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.neostra.android.oobe.SETUP_COMPLETE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Exit -->
+        <activity android:name="com.neostra.android.oobe.OOBEExitActivity"
+            android:immersive="true"
+            android:exported="true"
+            android:configChanges="mcc|mnc|locale|keyboard|keyboardHidden|orientation|navigation|screenLayout|fontScale|screenSize|uiMode|smallestScreenSize|layoutDirection"
+            android:excludeFromRecents="true"
+            android:theme="@style/WizardStyleNoAppWindow">
+            <intent-filter>
+                <action android:name="com.neostra.android.oobe.SETUP_EXIT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+       
+    </application>
+
+</manifest>

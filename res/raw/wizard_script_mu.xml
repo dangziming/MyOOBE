@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WizardScript wizard:firstAction="welcome"
+  xmlns:wizard="http://schemas.android.com/apk/res/com.neostra.android.oobe">
+
+    <!-- Welcome -->
+    <WizardAction id="welcome"
+        wizard:uri="intent:#Intent;action=com.neostra.android.oobe.WELCOME_MU;end">
+        <result wizard:action="wifi_settings" />
+    </WizardAction>
+
+    <!-- Select wifi -->
+    <WizardAction id="wifi_settings"
+        wizard:uri="intent:#Intent;action=com.neostra.android.oobe.WIFI_SETTING;end">
+        <!-- has network connection, go name setup -->
+        <result wizard:name="connected" wizard:resultCode="-1" wizard:action="name_setup" />
+        <!-- no network connection, go datetime setup -->
+        <result wizard:name="no_connection" wizard:action="name_setup" />
+    </WizardAction>
+
+    <!-- Name -->
+    <WizardAction id="name_setup"
+        wizard:uri="intent:#Intent;action=com.neostra.android.oobe.NAME_SETUP;end">
+        <result wizard:action="oem_post_setup" />
+    </WizardAction>
+
+    <!-- OEM post setup -->
+    <WizardAction id="oem_post_setup"
+         wizard:uri="intent:#Intent;action=com.android.setupwizard.OEM_POST_SETUP;end">
+        <result wizard:action="exit" />
+    </WizardAction>
+
+    <!-- Setup complete -->
+    <WizardAction id="setup_complete"
+        wizard:uri="intent:#Intent;action=com.neostra.android.oobe.SETUP_COMPLETE;end">
+        <result wizard:action="exit" />
+    </WizardAction>
+
+    <WizardAction id="exit"
+        wizard:uri="intent:#Intent;action=com.neostra.android.oobe.SETUP_EXIT;launchFlags=0x10208000;end" />
+</WizardScript>

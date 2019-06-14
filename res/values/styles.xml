@@ -1,0 +1,196 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+        android:Theme.Material.Light.NoActionBar
+    -->
+    <attr name="wifi_signal" format="reference" />
+    <style name="AppBaseTheme" parent="android:Theme.Material.Light.NoActionBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="suwCardBackground">@drawable/suw_card_bg</item>
+        <item name="suwNavBarTheme">@style/SuwNavBarThemeLight</item>
+    </style>
+    
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowAnimationStyle">@style/Animation.SuwWindowAnimation</item>
+    </style>
+
+    <!-- Content style -->
+    <style name="ContentStyle">
+        <item name="android:paddingStart">@dimen/suw_layout_margin_sides</item>
+        <item name="android:paddingEnd">@dimen/suw_layout_margin_sides</item>
+        <item name="android:paddingTop">@dimen/suw_description_margin_top</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <!-- Content desc text style -->
+    <style name="ContentDescStyle" parent="android:TextAppearance.Material.Subhead">
+        <item name="android:textColor">@color/content_desc_color</item>
+        <item name="android:lineSpacingExtra">@dimen/suw_description_line_spacing_extra</item>
+    </style>
+
+    <!-- Name activity Caption -->
+    <style name="NameCaptionStyle" parent="android:TextAppearance.Material.Caption">
+        <item name="android:textColor">@color/name_caption_color</item>
+    </style>
+
+    <style name="neostraLegalTheme" parent="AppTheme">
+        <item name="android:colorAccent">@android:color/white</item>
+        <item name="android:colorControlNormal">@android:color/white</item>
+    </style>
+
+    <style name="setupWizardOuterFrame">
+        <!-- <item name="android:paddingLeft">@dimen/setupWizardOuterFrame_paddingLeft</item>
+        <item name="android:paddingTop">@dimen/setupWizardOuterFrame_paddingTop</item>
+        <item name="android:paddingRight">@dimen/setupWizardOuterFrame_paddingRight</item>
+        <item name="android:paddingBottom">@dimen/setupWizardOuterFrame_paddingBottom</item>
+         -->
+         <item name="android:background">@color/all_bg</item>
+    </style>
+
+    <!-- title area style -->
+    <style name="titleArea">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <!-- fake green status bar -->
+    <style name="greenStatusBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@color/title_bg</item>
+    </style>
+
+    <!-- title style -->
+    <style name="Title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/TitleTextAppearance</item>
+        <item name="android:layout_marginBottom">@dimen/setup_title_margin_bottom</item>
+        <item name="android:layout_marginEnd">@dimen/setup_wizard_margin_sides</item>
+        <item name="android:layout_marginStart">@dimen/setup_wizard_margin_sides</item>
+        <item name="android:paddingBottom">@dimen/setup_title_padding_bottom</item>
+        <item name="android:paddingTop">@dimen/setup_title_padding_top</item>
+        <item name="android:textSize">@dimen/title_size</item>
+        <item name="android:layout_gravity">bottom</item>
+    </style>
+    <style name="SetupCardTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">@dimen/setup_wizard_card_title_padding_bottom</item>
+        <item name="android:paddingEnd">@dimen/setup_wizard_card_title_padding_end</item>
+        <item name="android:paddingStart">@dimen/setup_wizard_card_title_padding_start</item>
+        <item name="android:paddingTop">@dimen/setup_wizard_card_title_padding_top</item>
+        <item name="android:textAppearance">@style/TextAppearance.WizardCardTitle</item>
+    </style>
+    <!-- land title style -->
+    <style name="LandTitle">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">6</item>
+        <item name="android:textAppearance">@style/TextAppearance.WizardCardTitle</item>
+        <item name="android:layout_marginTop">@dimen/setup_wizard_tablet_illustration_height</item>
+        <item name="android:textSize">@dimen/title_size</item>
+        <item name="android:paddingTop">@dimen/setup_wizard_card_title_padding_top</item>
+        <item name="android:paddingStart">@dimen/setup_wizard_card_title_padding_start</item>
+        <item name="android:paddingEnd">@dimen/setup_wizard_card_title_padding_end</item>
+        <item name="android:paddingBottom">@dimen/setup_wizard_card_title_padding_bottom</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:marqueeRepeatLimit">marquee_forever</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+    <style name="TitleTextAppearance">
+        <item name="android:textSize">@dimen/title_size</item>
+        <item name="android:textColor">@color/title_color</item>
+        <item name="android:clickable">false</item>
+        <item name="android:longClickable">false</item>
+    </style>
+
+    <!-- content area style -->
+    <style name="contentArea">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingLeft">@dimen/setup_wizard_margin_sides</item>
+        <item name="android:paddingRight">@dimen/setup_wizard_margin_sides</item>
+    </style>
+
+    <style name="landContentArea">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">8</item>
+        <item name="android:layout_marginTop">@dimen/setup_wizard_card_land_margin_top</item>
+    </style>
+
+    <style name="SetupAddWifiNetwork">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:paddingStart">@dimen/setup_list_no_icon_padding</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Small</item>
+        <item name="android:textColor">?android:attr/colorAccent</item>
+    </style>
+
+    <!-- Wifi Dialog -->
+    <style name="wifi_section">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="wifi_item">
+        <item name="android:layout_marginTop">8dip</item>
+        <item name="android:layout_marginStart">8dip</item>
+        <item name="android:layout_marginEnd">8dip</item>
+        <item name="android:paddingStart">8dip</item>
+        <item name="android:paddingEnd">8dip</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <style name="wifi_item_edit_content">
+        <item name="android:paddingStart">4dip</item>
+        <item name="android:layout_marginStart">4dip</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="wifi_item_label">
+        <item name="android:paddingStart">8dip</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Material.Body1</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <style name="TextAppearance.WizardCardTitle" parent="@android:style/TextAppearance.Material.Display1">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="WelcomeMuMessage">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="android:layout_marginTop">@dimen/welcome_mu_message_margin_top</item>
+    </style>
+
+    <style name="neostraLegalDialog" parent="@android:style/Theme.Material.Light.Dialog.Alert">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="WizardStyleNoAppWindow">
+        <!-- Theme to disable the app starting window. The actual theme of the activity needs to
+             be then set in code via setTheme or onApplyThemeResource. -->
+        <item name="android:windowBackground">@null</item>
+    </style>
+</resources>

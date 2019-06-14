@@ -1,0 +1,40 @@
+<resources>
+    <color name="content_desc_color">#de000000</color>
+    <color name="name_caption_color">#8a000000</color>
+
+    <color name="title_color">@android:color/white</color>
+    <color name="picker_divider">#96c140</color>
+    <color name="title_bg">#64891f</color>
+    <color name="all_bg">#f5f5f5</color>
+    <color name="legal_webview_bg">#dcdcdc</color>
+    <color name="legal_checkbox_text">#2d2d2d</color>
+    <color name="link_text_color">#ff009688</color>
+
+    <color name="next_button_color">#ffE6333F</color>
+    <color name="next_button_disable_color">#99E6333F</color>
+    <color name="next_button_pressed_color">#FFC72B36</color>
+    <color name="show_text_color">#ff333333</color>
+
+    <color name="panel_title_color">#ff333333</color>
+    <color name="panel_background_color">#FFEDEDED</color>
+    <color name="list_color">#333333</color>
+    <color name="list_summary_color">#333333</color>
+
+    <color name="wifi_title_color">#ff333333</color>
+    <color name="wifi_summary_color">#ff999999</color>
+    <color name="skip_button_text_color">#ff666666</color>
+    <color name="customized_title_color">#ff333333</color>
+    <color name="direction_marked_color">#ff999999</color>
+    <color name="direction_color">#ffCCCCCC</color>
+    <color name="connected_ssid_color">#ff333333</color>
+    <color name="connected_state_color">#ff999999</color>
+    
+    <color name="colorPasswordBackground">#eeeeee</color>
+    <color name="ssidColor">#333333</color>
+    <color name="ssidConnectedColor">#E6333F</color>
+    <color name="password_title_color">#333333</color>
+    <color name="password_cancle_color">#999999</color>
+    <color name="password_connect_color">#E6333F</color>
+    
+    <color name="colorAccent">#ffe7333f</color>
+</resources>

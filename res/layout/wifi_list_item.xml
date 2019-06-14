@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/selector" >
+
+    <TextView
+        android:id="@+id/ssid"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/list_height"
+        android:layout_marginLeft="@dimen/wifi_list_padding_strat"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:textColor="@color/ssidColor"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/lock"
+        android:layout_width="@dimen/wifi_icon_width"
+        android:layout_height="@dimen/wifi_icon_height"
+        android:layout_marginRight="@dimen/wifi_list_padding_end"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_wifi_lock" />
+
+    <ImageView
+        android:id="@+id/connected"
+        android:layout_width="@dimen/selected_icon_width"
+        android:layout_height="@dimen/selected_icon_height"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@id/lock"
+        android:layout_marginRight="@dimen/wifi_icon_padding_size"
+        android:src="@drawable/ic_selected"
+        android:visibility="invisible" />
+
+</RelativeLayout>
